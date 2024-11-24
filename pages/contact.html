@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/media/titleLogo.png" />
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/style/style.css" />
+    <!-- fontovi -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="shortcut icon" href="../assets/media/titleLogo.png"/>
+
+    <title>Đokić Web Development</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="nav">
+        <button class="hamburger-button" id="hamburger-button">&#9776;</button>
+        <div class="container dispay-flex">
+          <div class="nav__links" id="nav-links">
+            <a href="../index.html" class="nav__link">Početna</a>
+            <a href="about.html" class="nav__link">O kompaniji</a>
+            <a href="team.html" class="nav__link">Naš tim</a>
+            <a href="delatnost.html" class="nav__link">Delatnost</a>
+            <a href="contact.html" class="nav__link">Kontakt</a>
+            <a href="demo.html" class="nav__link">Demo</a>
+          </div>
+        </div>
+      </nav>
+      <!-- ###################################### -->
+      <section class="contact">
+        <div class="container">
+          <div class="row contact-row">
+            <div class="col-md-6 contact__bg-img contact__bg-img-1"></div>
+            <div class="col-md-6">
+              <h1 class="contact__title">Kontakt</h1>
+              <p class="contact__paragraph">
+                Za sve poslovne upite i saradnju na izradi veb sajta, molimo vas
+                da nas kontaktirate. Naš tim je spreman da vam pruži stručnost i
+                kvalitetnu uslugu. Očekujemo vašu poruku kako bismo započeli
+                zajednički projekat.
+              </p>
+              <ul>
+                <li class="contact__li">Mail: hello@djowebdev.com</li>
+                <li class="contact__li">Telefon: 060-000-000</li>
+                <li class="contact__li">Lokacija: Bulevar Nemanjica Zona 3</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row contact-row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 text-center">
+              <h1 class="contact__form-title">Kontaktirajte nas direktno:</h1>
+              <form>
+                <input
+                  type="text"
+                  id="input-name"
+                  class="contact__form-input"
+                  placeholder="Ime pošiljaoca"
+                />
+                <!-- error span -->
+                <span class="error-span" id="name-error-span"></span>
+                <!-- ####### -->
+                <input
+                  type="text"
+                  id="input-lastname"
+                  class="contact__form-input"
+                  placeholder="Prezime pošiljaoca"
+                />
+                <!-- error span -->
+                <span class="error-span" id="lastname-error-span"></span>
+                <!-- ####### -->
+                <input
+                  type="text"
+                  id="input-phone"
+                  class="contact__form-input"
+                  placeholder="Broj telefona"
+                /><br />
+                <!-- error span -->
+                <span class="error-span" id="phone-error-span"></span>
+                <!-- ####### -->
+                <select class="contact__form-input" id="input-type">
+                  <option disabled selected value="">Izaberi tip poruke</option>
+                  <option value="opsta">Opšta</option>
+                  <option value="zahtev">Zahtev za izradu</option>
+                  <option value="tehnicka">Tehnička podrška</option>
+                  <option value="saradnja">Partnerstvo ili saradnja</option>
+                  s
+                </select>
+                <!-- error span -->
+                <span class="error-span" id="type-error-span"></span>
+                <!-- ####### -->
+                <input
+                  id="input-title"
+                  type="text"
+                  class="contact__form-input"
+                  placeholder="Naslov Poruke"
+                />
+                <!-- error span -->
+                <span class="error-span" id="title-error-span"></span>
+                <!-- ####### -->
+                <textarea
+                  id="input-message"
+                  class="contact__textarea"
+                  placeholder="Tekst poruke"
+                ></textarea>
+                <!-- error span -->
+                <span class="error-span" id="message-error-span"></span>
+                <!-- ####### -->
+                <button id="form-submit" class="button send-btn" onclick="FormSubmitHandler(event)">
+                  Pošalji
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact-input-data" id="contact-input-data">
+        <div class="container">
+          <div class="row contact-input-data-row">
+            <table class="table" id="user-data-table">
+              <thead>
+                <th>Ime</th>
+                <th>Prezime</th>
+                <th>Broj telefona</th>
+                <th>Tip poruke</th>
+                <th>Naslov</th>
+                <th>Tekst prouke</th>
+              </thead>
+              <tbody id="contact-input-data-table">
+
+              </tbody>
+            </table>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- ###################################### -->
+
+      <!-- <section class="map">
+        <div class="map">
+          <div class="gmap_canvas">
+            <iframe
+              width="1920"
+              height="358"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=19&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe>
+          </div>
+        </div>
+      </section> -->
+
+      <footer class="footer">
+        <div class="container">
+          <h3>Đokić Web Development</h3>
+          <p class="footer__paragraph">
+            Mihajlo Đokić - 5368 - "Softversko Inžinjerstvo"
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

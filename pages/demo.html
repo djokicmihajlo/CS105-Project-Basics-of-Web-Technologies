@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/media/titleLogo.png" />
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/style/style.css" />
+    <!-- fontovi -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="shortcut icon" href="../assets/media/titleLogo.png"/>
+
+    <title>Đokić Web Development</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="nav">
+        <button class="hamburger-button" id="hamburger-button">&#9776;</button>
+        <div class="container dispay-flex">
+          <div class="nav__links" id="nav-links">
+            <a href="../index.html" class="nav__link">Početna</a>
+            <a href="about.html" class="nav__link">O kompaniji</a>
+            <a href="team.html" class="nav__link">Naš tim</a>
+            <a href="delatnost.html" class="nav__link">Delatnost</a>
+            <a href="contact.html" class="nav__link">Kontakt</a>
+            <a href="demo.html" class="nav__link">Demo</a>
+          </div>
+        </div>
+      </nav>
+      <section class="price-calculator">
+        <div class="container">
+            <div class="row calc-row">
+                <div class="col-3"></div>
+                <div class="col-md-6 align-center">
+                    <h1>Kalkulator cena</h1>
+                    <select class="service__select" id="service-select" onchange="handleServiceChange()">
+                        <option disabled selected value="">Izaberi tip usluge</option>
+                        <option value="web">Izrada vebsajta</option>
+                        <option value="ecom">Izrada E-commerce Platforme</option>
+                    </select>
+                    <div id="website-options">
+                        <span class="calc-labels">Broj stranica:</span>
+                        <input class="calc__input" id="web-pages" type="number" value="1" min="1"><br>
+                        <span class="calc-labels">Broj sekcija:</span>
+                        <input class="calc__input" id="web-sections" type="number" value="4" min="4"><br>
+                        <button class="button calc__button" onclick="calculateCostWeb()">Izračunaj</button>
+                    </div>
+                    <div id="ecom-options">
+                        <span class="calc-labels">Broj stranica:</span>
+                        <input class="calc__input" id="ecom-pages" type="number" value="5" min="5"><br>
+                        <span class="calc-labels">Broj proizvoda:</span>
+                        <input class="calc__input" id="ecom-products" type="number" value="20" min="20"><br>
+                        <button class="button calc__button" onclick="calculateCostEcom()">Izračunaj</button>
+                    </div>
+                    <h4 id="cost-div"></h4>
+                    <a href="contact.html"
+                ><button id="demo-contact" class="button about-btn calc__contact-btn">Konkatijate nas</button>
+              </a>
+
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <h3>Đokić Web Development</h3>
+          <p class="footer__paragraph">
+            Mihajlo Đokić - 5368 - "Softversko Inžinjerstvo"
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>
